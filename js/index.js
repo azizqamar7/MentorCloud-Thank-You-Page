@@ -131,7 +131,7 @@ function sendEmail (url) {
                                 <br></br>
                                 <br></br>
                                 Hope this message fills your heart with gratitude. Please pass along this act of gratitude to somebody who has helped you.
-                                <a href="https://www.mentorcloud.com/thankyou">
+                                <a href="https://mc-thankyou.netlify.app/">
                                     Click here.
                                 </a>
                                 <br></br>
