@@ -237,6 +237,13 @@ sendAnotherBtn.addEventListener('click', () => {
     const form = document.getElementById('email-form')
     const cardCheckMsg = document.getElementById('card-check-msg')
     sendBtn.value = 'Send thank you card'
+
+    // Reset display message
+    for (let i = 0; i < displayMessage.length; i++) {
+        displayMessage[i].textContent = 'Message will appear here'
+    }
+    document.getElementById('remaining-count').textContent = maxCharacters
+
     formBlock.style.display = 'block'
     form.reset()
     successBlock.style.display = 'none'
