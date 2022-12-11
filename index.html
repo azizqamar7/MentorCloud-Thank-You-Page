@@ -195,9 +195,7 @@
                 <a href="#form" class="body-text-big cc--link"
                   >2. Customise your message</a
                 >
-                <a href="#success" class="body-text-big cc--link"
-                  >3. Send to your Mentor</a
-                >
+                <a href="#success" class="body-text-big cc--link">3. Send</a>
               </div>
             </div>
             <div class="full-width cc--ty">
@@ -359,9 +357,28 @@
                             id="recipient-email"
                             required=""
                           />
+                          <textarea
+                            id="thankyou-msg"
+                            name="thankyou-msg"
+                            maxlength="150"
+                            data-name="thankyou-msg"
+                            placeholder="Type the content here.."
+                            class="c_text-field cc--msg w-input"
+                            required
+                          ></textarea>
+                          <p id="display-textcount">
+                            <span id="remaining-count">150</span>/150
+                          </p>
+                          <input
+                            type="submit"
+                            id="send-btn"
+                            value="Send thank you card"
+                            data-wait="Please wait..."
+                            class="c_submit-now w-button"
+                          />
                         </div>
                       </div>
-                      <div class="c_element-1">
+                      <!-- <div class="c_element-1">
                         <div class="c_field-wrapper cc--msg">
                           <textarea
                             id="thankyou-msg"
@@ -382,6 +399,7 @@
                               src="images/thnk-u-page.png"
                               loading="lazy"
                               alt=""
+                              hidden
                             />
                           </div>
                         </div>
@@ -392,7 +410,7 @@
                         value="Send thank you card"
                         data-wait="Please wait..."
                         class="c_submit-now w-button"
-                      />
+                      /> -->
                     </form>
                     <!-- <div class="w-form-done">
                       <div>Thank you! Your submission has been received!</div>
@@ -449,9 +467,7 @@
                           <p
                             class="c_text-field cc_top-0px"
                             id="display-from-name"
-                          >
-                            azizqamar7@gmail.com
-                          </p>
+                          ></p>
                         </div>
                       </div>
                       <div class="c_element-1">
@@ -470,9 +486,7 @@
                           <p
                             class="c_text-field cc_top-0px"
                             id="display-to-name"
-                          >
-                            qamar@frozeniris.com
-                          </p>
+                          ></p>
                         </div>
                       </div>
                     </form>

@@ -41,11 +41,9 @@ function uploadImage () {
     uploadString(imgRef, dataUrl, 'data_url').then((snapshot) => {
         getDownloadURL(ref(snapshot.ref))
             .then(url => {
-                console.log(url)
                 sendEmail(url)
             })
             .catch(err => console.log("err"))
-        console.log(snapshot);
     });
 }
 
@@ -58,14 +56,14 @@ for (let i = 0; i < cards.length; i++) {
         }
         this.className += ' current'
     })
+
 }
 
 // Create <p> element across the cards
 for (let i = 0; i < cards.length; i++) {
     const displayPlaceholder = document.createElement('p')
-    // const displayPlaceholder = document.querySelector('.display-msg')
     displayPlaceholder.setAttribute('class', 'display-msg')
-    displayPlaceholder.textContent = "Message will appear here"
+    displayPlaceholder.innerHTML = "Message will appear here"
     cards[i].append(displayPlaceholder)
 }
 
@@ -74,10 +72,36 @@ const displayMessage = document.querySelectorAll('.display-msg')
 
 // Change text on input
 function inputHandler (e) {
+    // console.log(e)
     for (let i = 0; i < displayMessage.length; i++) {
-        displayMessage[i].textContent = e.target.value
+        displayMessage[i].innerText = e.target.value
     }
 }
+
+const displayTextCount = document.getElementById('display-textcount');
+displayTextCount.style.display = 'none'
+
+// Listen for the 'focus' event on the textarea.
+messageInput.addEventListener('focus', function () {
+    displayTextCount.style.display = 'block'
+})
+
+
+
+// Set the maximum character count.
+const maxCharacters = 150;
+
+// Listen for the 'input' event on the text field.
+messageInput.addEventListener('input', function () {
+    // Get the number of characters in the field.
+    const characterCount = messageInput.value.length;
+
+    // Calculate the remaining character count.
+    const remainingCharacters = maxCharacters - characterCount;
+
+    // Update the remaining character count display.
+    document.getElementById('remaining-count').textContent = remainingCharacters;
+});
 
 // Change names on input after submission of form
 function fromNameHandler (e) {
@@ -159,7 +183,7 @@ function sendEmail (url) {
         SecureToken: "4c70682b-f333-4d48-93f9-d1ebc5c61973",
         To: email,
         From: 'azizqamar7@gmail.com',
-        Subject: `${toName}, ${fromName} has a message for you!`,  // [Receivers Name], [Sender Name] has a message for you!
+        Subject: `${toName}, ${fromName} has a message for you!`,
         Body: emailBody
     }).then(
         message => {
@@ -176,32 +200,59 @@ function sendEmail (url) {
 
 // Pass individual card on send
 function passOnClick () {
-    const markedChecked = document.querySelector('.c_slide-selector.current')
     const cardCheckMsg = document.getElementById('card-check-msg')
 
-    // Validate cards & pass the current card to the function
-    for (let i = 0; i < cards.length; i++) {
-        if (cards[i] == markedChecked) {
+    // Function to validate the group of card elements
+    function validateCards () {
+        // Use querySelectorAll() to find all of the card elements with the selected class
+        const selectedCards = document.querySelectorAll('.c_slide-selector.current');
+        // Check the length of the returned node list
+        if (selectedCards.length === 1) {
+            // Exactly one card element has been selected, the group is valid
+            const markedChecked = selectedCards[0]
+            cardCheckMsg.hidden = true
+            sendBtn.value = 'Please wait...'
             cardsToCanvas(markedChecked)
-        }
-        else {
+        } else {
+            // None or more than one of the card elements have been selected, the group is invalid
             cardCheckMsg.hidden = false
         }
     }
+
+    validateCards()
 }
+
+
+
+
 
 //events 
 fromInputName.addEventListener('input', fromNameHandler)
 toInputName.addEventListener('input', toNameHandler)
 messageInput.addEventListener('input', inputHandler)
-sendBtn.addEventListener('click', passOnClick)
+
 sendAnotherBtn.addEventListener('click', () => {
     const successBlock = document.getElementById('success')
     const formBlock = document.getElementById('form')
     const form = document.getElementById('email-form')
     const cardCheckMsg = document.getElementById('card-check-msg')
+    sendBtn.value = 'Send thank you card'
     formBlock.style.display = 'block'
     form.reset()
     successBlock.style.display = 'none'
     cardCheckMsg.hidden = true
 })
+
+// Get the form element
+var form = document.getElementById("form");
+
+// Create a submit event handler that checks the form validity
+form.addEventListener("submit", function (event) {
+    // Check if the form is valid
+    if (!form.checkValidity) {
+        // Prevent the form from being submitted
+        event.preventDefault();
+    }
+
+    passOnClick()
+});

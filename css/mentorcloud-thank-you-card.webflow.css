@@ -10,12 +10,17 @@
   grid-column-gap: 16px;
 }
 
+/* .c_current-img_wrapper {
+  scale: 0.6;
+} */
+
 .current {
   filter: brightness(120%);
 }
 
 .card-check-msg {
   margin-top: 10px;
+  margin-right: 30px;
   padding: 10px;
   background-color: #ffdede;
 }
@@ -91,6 +96,7 @@
   -webkit-transform: rotate(-10deg);
   -ms-transform: rotate(-10deg);
   transform: rotate(-10deg);
+  word-wrap: break-word;
 }
 
 .full-width {
@@ -609,6 +615,7 @@
   height: 120px;
   margin-top: 20px;
   margin-bottom: 20px;
+  resize: none
 }
 
 .hidden {
@@ -1079,6 +1086,10 @@
 }
 
 @media screen and (max-width: 479px) {
+  .card-cover-overlay {
+    width: 19.5%;
+  }
+
   .column-one {
     padding-top: 0px;
   }
