@@ -140,31 +140,23 @@ function sendEmail (url) {
 
     var emailBody = `<html> 
                         <p>Dear ${toName}</p>
-                        <p>We, at MentorCloud, are so grateful for each of the wisdom you bring to our community.<br></br> ${fromName}</p>
-                        <strong>On this day, ${fromName} has sent you a message.</strong>
-                        <br></br>
+                        <p>${fromName} is feeling super grateful for all your guidance, mentorship and care, and sent you this Thank You card.</p>
                         <div> 
                             <p>
-                                ${message}
+                                <img src="${url}" width="250px" />
                                 <br></br>
                                 <br></br>
-                                <img src="${url}" />
+                                Thank you once again for creating an impact, ${fromName}'s life and career.
                                 <br></br>
                                 <br></br>
-                                Thank you once again for creating an impact, ${fromName}.
-                                <br></br>
-                                <br></br>
-                                Hope this message fills your heart with gratitude. Please pass along this act of gratitude to somebody who has helped you.
+                                PS: You have someone to thank?
                                 <a href="https://mc-thankyou.netlify.app/">
-                                    Click here.
+                                    Click here
                                 </a>
+                                 to send them a thank you card.
                                 <br></br>
                                 <br></br>
-                                Note: Replying to this message will not be sent to ${fromName}
-                                <br></br>
-                                <br></br>
-                                Happy Mentoring!
-                                <br></br>
+                                <small>The Gratitude Movement by MentorCloud</small>
                                 <br></br>
                                 <img src="https://assets.website-files.com/5f97aed45612e672a043c898/637dc5b342ffe87ae166c71e_MentorCloud_Logo_Original_Shamrock-p-500.png" />
                                 <br></br>
@@ -174,7 +166,9 @@ function sendEmail (url) {
                                 </a>
                                 <br></br>
                                 <br></br>
-                                The Contents of this email may be legally privileged, confidential and also subject to copyright. If you believe you’re not the intended recipient of this email, I request you to inform us post which permanently delete the Contents of this email and not share or use it for any purposes.
+                                <small>Note: Replying to this message will not be sent to ${fromName}</small>
+                                <br></br>
+                                <small>The Contents of this email may be legally privileged, confidential and also subject to copyright. If you believe you’re not the intended recipient of this email, I request you to inform us post which permanently delete the Contents of this email and not share or use it for any purposes.</small>
                             </p>
                         </div>
                     </html>`
@@ -183,7 +177,7 @@ function sendEmail (url) {
         SecureToken: "4c70682b-f333-4d48-93f9-d1ebc5c61973",
         To: email,
         From: 'azizqamar7@gmail.com',
-        Subject: `${toName}, ${fromName} has a message for you!`,
+        Subject: `${toName}, ${fromName} sent you a Thank You card.`,
         Body: emailBody
     }).then(
         message => {
