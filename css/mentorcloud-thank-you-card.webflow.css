@@ -158,7 +158,7 @@
 }
 
 .c_col-1 {
-  width: 44px;
+  width: 75px;
 }
 
 .c_ty-banner {
@@ -615,7 +615,7 @@
 .c_text-field.cc--msg {
   width: 60%;
   height: 120px;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 20px;
   resize: none
 }
