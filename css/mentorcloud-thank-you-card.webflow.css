@@ -88,14 +88,14 @@
   left: 0%;
   top: auto;
   right: 0%;
-  bottom: 40px;
+  bottom: 70px;
   height: 100px;
   margin-right: 20px;
   margin-left: 20px;
   padding-right: 10px;
-  -webkit-transform: rotate(-10deg);
-  -ms-transform: rotate(-10deg);
-  transform: rotate(-10deg);
+  -webkit-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  transform: rotate(-6deg);
   word-wrap: break-word;
 }
 
@@ -539,6 +539,8 @@
   background-image: none;
   background-size: auto;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 6px;
 }
 
 .c_ty-banner_flex {
