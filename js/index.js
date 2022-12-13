@@ -150,7 +150,7 @@ function sendEmail (url) {
                                 <br></br>
                                 <br></br>
                                 PS: You have someone to thank?
-                                <a href="https://mc-thankyou.netlify.app/">
+                                <a href="https://thankyou.mentorcloud.com/">
                                     Click here
                                 </a>
                                  to send them a thank you card.
