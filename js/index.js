@@ -174,9 +174,9 @@ function sendEmail (url) {
                     </html>`
 
     Email.send({
-        SecureToken: "4c70682b-f333-4d48-93f9-d1ebc5c61973",
+        SecureToken: "4a6bb94a-e8de-4577-a76a-2462fde2338e",
         To: email,
-        From: 'azizqamar7@gmail.com',
+        From: 'MentorCloud <talktous@mentorcloud.com>',
         Subject: `${toName}, ${fromName} sent you a Thank You card.`,
         Body: emailBody
     }).then(
