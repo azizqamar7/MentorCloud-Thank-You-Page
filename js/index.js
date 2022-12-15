@@ -140,7 +140,7 @@ function sendEmail (url) {
 
     var emailBody = `<html> 
                         <p>Dear ${toName}</p>
-                        <p>${fromName} is feeling super grateful for all your guidance, mentorship and care, and sent you this Thank You card.</p>
+                        <p>${fromName}  sent you a Thank You card.</p>
                         <div> 
                             <p>
                                 <img src="${url}" width="250px" />
