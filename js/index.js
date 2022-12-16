@@ -143,7 +143,7 @@ function sendEmail (url) {
                         <p>${fromName}  sent you a Thank You card.</p>
                         <div> 
                             <p>
-                                <img src="${url}" width="250px" />
+                                <img src="${url}" />
                                 <br></br>
                                 <br></br>
                                 Thank you for being such an impactful person in ${fromName}'s life and career.
@@ -158,7 +158,7 @@ function sendEmail (url) {
                                 <br></br>
                                 The Gratitude Movement by MentorCloud
                                 <br></br>
-                                <img src="https://uploads-ssl.webflow.com/5f97aed45612e672a043c898/639c0a6819d6f28201b52339_mc.png" />
+                                <img src="https://uploads-ssl.webflow.com/5f97aed45612e672a043c898/639c0a6819d6f28201b52339_mc.png" width="250px" />
                                 <br></br>
                                 <br></br>
                                 <a href="https://www.mentorcloud.com/">
