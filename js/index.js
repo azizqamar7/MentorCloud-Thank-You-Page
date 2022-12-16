@@ -149,7 +149,7 @@ function sendEmail (url) {
                                 Thank you for being such an impactful person in ${fromName}'s life and career.
                                 <br></br>
                                 <br></br>
-                                PS: You have someone to thank?
+                                PS: Have someone to thank?
                                 <a href="https://thankyou.mentorcloud.com/">
                                     Click here
                                 </a>
