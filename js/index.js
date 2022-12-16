@@ -158,7 +158,7 @@ function sendEmail (url) {
                                 <br></br>
                                 The Gratitude Movement by MentorCloud
                                 <br></br>
-                                <img src="https://assets.website-files.com/5f97aed45612e672a043c898/637dc5b342ffe87ae166c71e_MentorCloud_Logo_Original_Shamrock-p-500.png" />
+                                <img src="https://uploads-ssl.webflow.com/5f97aed45612e672a043c898/639c02e297fd700b5b3f4e65_imageedit_3_2306005445.png" />
                                 <br></br>
                                 <br></br>
                                 <a href="https://www.mentorcloud.com/">
