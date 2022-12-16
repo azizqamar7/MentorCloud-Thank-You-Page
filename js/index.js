@@ -117,7 +117,7 @@ function toNameHandler (e) {
 // Convert HTML cards to canvas
 let dataUrl
 function cardsToCanvas (markedChecked) {
-    html2canvas(markedChecked).then(canvas => {
+    html2canvas(markedChecked, { scale: 6 }).then(canvas => {
         dataUrl = canvas.toDataURL('image/png')
 
         const image = new Image()
@@ -143,7 +143,7 @@ function sendEmail (url) {
                         <p>${fromName}  sent you a Thank You card.</p>
                         <div> 
                             <p>
-                                <img src="${url}" />
+                                <img src="${url}" width="256px" />
                                 <br></br>
                                 <br></br>
                                 Thank you for being such an impactful person in ${fromName}'s life and career.
