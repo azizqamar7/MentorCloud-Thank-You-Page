@@ -146,7 +146,7 @@ function sendEmail (url) {
                                 <img src="${url}" width="250px" />
                                 <br></br>
                                 <br></br>
-                                Thank you once again for creating an impact, ${fromName}'s life and career.
+                                Thank you for being such an impactful person in ${fromName}'s life and career.
                                 <br></br>
                                 <br></br>
                                 PS: You have someone to thank?
@@ -156,7 +156,7 @@ function sendEmail (url) {
                                  to send them a thank you card.
                                 <br></br>
                                 <br></br>
-                                <small>The Gratitude Movement by MentorCloud</small>
+                                The Gratitude Movement by MentorCloud
                                 <br></br>
                                 <img src="https://assets.website-files.com/5f97aed45612e672a043c898/637dc5b342ffe87ae166c71e_MentorCloud_Logo_Original_Shamrock-p-500.png" />
                                 <br></br>
